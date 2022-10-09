@@ -25,11 +25,11 @@ function onGalleryItemClick(evt) {
   if (!evt.target.classList.contains('gallery__image')) {
     return;
   }
-
-  let gallery = new SimpleLightbox('.gallery a', {
-    captionsData: 'alt',
-    captionDelay: 250,
-  });
-
-  gallery.on('show.simplelightbox');
 }
+
+let gallery = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
+  captionDelay: 250,
+});
+
+gallery.on('show.simplelightbox');
