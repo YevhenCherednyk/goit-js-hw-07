@@ -39,12 +39,16 @@ function onGalleryItemClick(evt) {
   instance.show();
 
   window.addEventListener('keydown', onEscKeyPress);
-}
 
-function onEscKeyPress(evt) {
-  if (evt.code === 'Escape') {
-    window.removeEventListener('keydown', onEscKeyPress);
-    document.querySelector('.basicLightbox').remove();
+  function onEscKeyPress(evt) {
+    if (evt.code === 'Escape') {
+      instance.close();
+    }
   }
+  // function onEscKeyPress(evt) {
+  //   if (evt.code === 'Escape') {
+  //     window.removeEventListener('keydown', onEscKeyPress);
+  //     document.querySelector('.basicLightbox').remove();
+  //   }
 }
 // console.log(galleryItems);
